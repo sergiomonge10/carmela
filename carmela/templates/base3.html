@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<title>{% block title %} {% endblock %} </title>
+  	<link rel="stylesheet" href="/media/css/bootstrap.min.css"/>
+  	<link rel="stylesheet" href="/media/css/bootstrap-responsive.min.css"/>
+  	<link rel="stylesheet/less" href="/media/css/main.less"/>
+  </head>	
+  <body>
+  	<header class = "header">
+  		<nav class = "navBar">
+  		 <ul>
+			<li><a href="{% url view_index %}">Inicio</a></li>
+  		 	<li><a href="{% url view_noticias%}">Noticias</a></li>
+  		 	<li><a href="{% url view_equipos %}">Equipos</a></li>
+  		 	<li><a href="">Live Your Goals</a></li>
+  		 </ul>	
+  		</nav>
+  	</header>
+  	<div class="container-fluid">
+  	 <div class="contentWrapper">
+  	  <section id="content">
+  	  	<div class="row-fluid">
+  	  	 <div class="span12">|
+  	  	  <div id="homeCarousel" class="carousel slide">
+  	  	  	<div class="carousel-inner">
+  	  	  	  <div class="active item">
+  	  	  	  	<div id = "upperSquare" class="bigSquare span12">
+  	  	  	  	  <h2 class = "bgText">Nuestra pasion<br/>tambien es el futbol</h2>	
+  	  	  	  	</div>
+  	  	  	  </div> 
+  	  	  	  <div class="item">
+  	  	  	  	<div id = "upperSquare2" class="bigSquare span12"></div>
+  	  	  	  </div>
+  	  	  	  <div class="item">
+  	  	  	  	<div id = "upperSquare3" class="bigSquare span12"></div>
+  	  	  	  </div>	
+  	  	  	</div>
+  	  	  </div>
+  	  	 </div>	
+  	  	 <!---->
+  	  	 <!--<div id = "upperSquare2" class="bigSquare span12"></div>-->	
+  	  	 <!--<div id = "upperSquare3" class="bigSquare span12"></div>-->
+  	  	</div>
+  	  	<br/>
+  	  	<br/>
+  	  	<br/>
+  	  	<div class="row-fluid">
+  	  	 <div id="col-left" class = "span3">
+  	  	  <div class = "square">
+  	  	  	<ul id="options">
+  	  	  	 <li><img src="/media/images/facebook.png" alt=""><a href="">Facebook</a></li>
+  	  	  	 <li><img src="/media/images/twitter.png" alt=""><a href="">Twitter</a></li>
+  	  	  	 <li><img src="/media/images/envelope.png"alt=""><a href="">Contacto</a></li>
+  	  	  	 <li><img src="/media/images/play.png"alt=""><a href="">App</a></li>
+  	  	  	</ul>
+  	  	  </div>	
+  	  	  <div id = "goals" class = "square"><img src="/media/images/goals.png" alt=""></div>
+  	  	 </div>	
+  	  	 <div id = "centered" class = "middleSquare span6">	
+			{% block content-center %}
+			{% endblock %}
+  	  	 </div>
+  	  	 <div id="col-right" class = "span3">
+  	  	  <div id = "ref" class = "square"><img src="/media/images/whistle.png"alt=""></div>	
+  	  	  <div id = "league" class = "square"><h1 class="commonText">Temporada Uniffut <?php echo Date("Y"); ?></h1></div>
+  	  	 </div>
+  	  	</div>
+  	  </section>
+  	  <section id="app">
+  	   <div class="row-fluid">
+  	    <img id = "app_img" class  = "span12" src="/media/images/app.jpg" alt="">		
+  	   </div>
+  	  </section>
+  	  <section id="sponsors">
+  	  	<div id = "sponsor_container" class="row-fluid">
+  	  	 <div id="coke" class="span4 sponsorSquare"><img src="/media/images/coke.png"alt=""></div>	
+  	  	 <div id="powerade" class="span4 sponsorSquare"><img src="/media/images/power.png"alt=""></div>	
+  	  	 <div id="rep" class="span4 sponsorSquare"><img src="/media/images/tel.png"alt=""></div>	
+  	  	</div>
+  	  </section>
+  	  <br/>
+  	  <br/>	
+  	 </div>	
+  	</div>
+  	<script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+  	<script language = "javascript" src = "/media/js/bootstrap.min.js"></script>
+  	<script language = "javascript" src = "/media/js/custom.js"></script>
+  	<script language = "javascript" src = "/media/js/less.js"></script>
+  </body>
+</html>

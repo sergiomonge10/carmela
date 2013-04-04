@@ -1,0 +1,61 @@
+.navbar {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.container-fluid {
+	width: 80%;
+	margin: 0 auto;
+}
+
+body{
+	/*background: -moz-linear-gradient(top,  rgba(255,255,255,1) 50%, rgba(229,229,229,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(50%,rgba(255,255,255,1)), color-stop(100%,rgba(229,229,229,1)));
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%);
+	background: -o-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%);
+	background: -ms-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%);
+	background: linear-gradient(to bottom,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); */
+	
+	background: url(/media/images/estadio-nacional.jpg) no-repeat fixed center bottom;
+	/*background-repeat: no-repeat;*/
+}
+
+
+header{
+	background: white;
+	height: auto;
+}
+
+#principal-container{
+	margin-top: 10px;
+}
+
+#principal-row{
+	background: white;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	height: auto;
+	
+}
+
+#ads-row{
+	background: white;
+	height: auto;
+	margin-top: 4px;
+}
+
+#menu-btn{
+	position: relative;
+	margin-top: 13%;
+}
+
+#logo {
+
+}
+
+
+
+
+
+

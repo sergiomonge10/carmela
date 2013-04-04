@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+{% autoescape off %}
+<html lang="en">
+
+<head>	
+	<title> {% block title %} {% endblock %} </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='/media/css/bootstrap.css' rel='stylesheet' type='text/css'>
+	<link href='/media/css/bootstrap-responsive.css' rel='stylesheet' type='text/css'>
+	<link href='/media/css/style.css' rel='stylesheet' type='text/css'>
+
+	<link href='/media/css/ddmenu.css' rel='stylesheet' type='text/css'>
+    <script src='/media/js/ddmenu.js' type='text/javascript'></script>
+
+    <link href='/media/themes/1/slider.css' rel='stylesheet' type='text/css' >
+    <script src='/media/themes/1/thumbnail-slider.js' type='text/javascript'></script>
+
+
+</head>
+
+<body style="padding:15px 20px;">
+
+	<header>
+
+	<nav id="ddmenu">
+        <ul>
+            <li><a href="/equipos">Equipos</a>
+                <div>
+                    <div class="column">
+                        <b>Primera Division</b>
+                        <a href="#">Dolor sit amet</a>
+                        <a href="#">Consectetur elit</a>
+                        <a href="#">Etiam massa</a>
+                        <a href="#">Suscipit sapien</a>
+                        <a href="#">Quis turpis</a>
+                        <a href="#">Web Menu Builder</a>
+                        <a href="#">Quos torpusior</a>
+                        <a href="#">Velit a dapibus</a>
+                    </div>
+                    <div class="column">
+                        <b>Segunda Division</b>
+                        <a href="#">Sed interdum</a>
+                        <a href="#">Fringilla congue</a>
+                        <a href="#">Dolor nisl auctor</a>
+                        <a href="#">Best css menus</a>
+                        <a href="#">Porttitor</a>
+                        <a href="#">Tellus ullamcorper</a>
+                        <a href="#">Orci quis</a>
+                    </div>
+                    <div class="column">
+                        <b>Sub-17m</b>
+                        <a href="#">Donec molestie</a>
+                        <a href="#">Tempus semper</a>
+                        <a href="#">Most popular menus</a>
+                        <a href="#">Maecenas rutrum</a>
+                        <a href="#">Ullamcorper</a>
+                        <a href="#">Metus a mattis</a>
+                        <a href="#">Maecenas enim</a>
+                    </div>
+                    <div class="column" style="width:200px;text-align:center;">
+                        <img src="/media/images/img1.jpg" style="width:200px; height:175px;" />
+                        Drop Down Menu Maker
+                    </div>
+                </div>
+            </li>
+            <li><a href="/noticias/page/1">Noticias</a></li>
+            <li>Calendario
+                <div>
+                    <a href="#">Primera Division</a>
+                    <a href="#">Segunda Division</a>
+                </div>
+            </li>
+            <li><a href="#">Tabla de Posiciones</a>
+                <div>
+                    <a href="#">Primera Division</a>
+                    <a href="#">Segunda Division</a>
+                </div>  
+            </li>
+            <li><a href="#">Live your goals</a>
+            </li>
+            <li><a href="/galeria/page/1">Galeria</a>
+            </li>
+            <li><a href="#">Nosotros</a>
+            </li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+
+	</header>
+
+
+
+     <div id="principal-container" class="container-fluid">
+        <div id="principal-row" class="row-fluid">
+        <div class="span2">
+            <img src="/media/images/ad-app-140x200.png" />
+        </div>
+        <div class="span7">
+            {% block content-center%}
+            {% endblock %}
+        </div>
+        <div class="span2">
+            <div class="fb-like-box" data-href="https://www.facebook.com/pages/Uniffut/172605906221333" data-width="235" data-show-faces="true" data-stream="false" data-header="false"></div>
+        </div>
+    </div>
+
+
+    <br>
+
+     <div class="div2">
+        <div id="mcts1">
+            {% if patrocinadores%}
+                {% for p in patrocinadores%}
+                    <img src="{{p.multimedia}}" style="width:175px; height:100px;" >
+                {% endfor %}>
+            {% endif %}
+            <img src="/media/images/patrocinadores/cocacola.png" style="width:175px; height:100px;" >
+            <img src="/media/images/patrocinadores/powerade.jpg " style="width:175px; height:100px;" />
+            <img src="/media/images/patrocinadores/repretel.png" style="width:175px; height:100px;" />
+            <img src="/media/images/patrocinadores/thrifty.jpg"style="width:175px; height:100px;" /
+        </div>
+    </div>
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=114868051938176";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    
+
+    <footer>
+        <p class="text-right">Hecho por yo</p>
+    </footer>
+
+
+</body>
+{% endautoescape  %}
+</html>

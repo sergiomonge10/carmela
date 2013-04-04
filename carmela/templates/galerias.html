@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block title %} Equipos {% endblock %}
+
+
+{% block navbar %}
+
+	<li><a href="{% url view_index %}">Inicio</a></li>
+	<li><a href="{% url view_equipos %}">Equipos</a></li>
+	<li><a href="#">Live your Goals</a></li>
+	<li class="active"><a href="{% url view_noticias%}">Noticias</a></li>
+	<li><a href="#">Acerca</a></li>
+	<li><a href="#">Contacto</a></li>
+{% endblock %}
+
+
+{% block content-center %} 
+
+{% if galerias %} 
+		<h3>Galerias de Imagenes </h3>
+		{% for n in galerias %}
+			<br>
+			<a href="/galeria/{{n.id}}">{{n.nombre}} </a>
+		{% endfor %}
+
+{% else %}
+
+	<h5 class="text-center"><span class="label label-warning">Atención: No hay galerias para mostrar</span></h5>
+
+{% endif %}
+
+<br>
+<br>
+
+{% if galerias %}
+
+	<a href="/galerias/page/1"> << </a>
+
+	{% if galerias.has_previous %}
+		<a href="/galerias/page/{{galerias.previous_page_number}}">  Prev </a>
+	{% else %}
+		<a href="#"> Prev </a>
+	{% endif %}
+
+	{% if galerias.has_next %}
+		<a href="/galerias/page/{{galerias.next_page_number}}"> Next </a>
+	{% else %}
+		<a href="#"> Next </a>
+	{% endif %}
+
+		<a href="/galerias/page/{{galerias.paginator.num_pages}}"> >> </a>
+	
+	<h6> Page {{galerias.number}} of {{galerias.paginator.num_pages}} </h6>
+
+{% endif %}
+
+
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block title %} Equipos {% endblock %}
+
+
+{% block navbar %}
+
+	<li><a href="{% url view_index %}">Inicio</a></li>
+	<li><a href="{% url view_equipos %}">Equipos</a></li>
+	<li><a href="#">Live your Goals</a></li>
+	<li class="active"><a href="{% url view_noticias%}">Noticias</a></li>
+	<li><a href="#">Acerca</a></li>
+	<li><a href="#">Contacto</a></li>
+{% endblock %}
+
+
+{% block content-center %} 
+
+{% if noticias %} 
+		<h3>Noticias</h3>
+		{% for n in noticias %}
+			<h5>{{n.fecha}} - <a href="/noticia/{{n.id}}">{{n.titulo}} </a></h5>
+		{% endfor %}
+
+{% else %}
+
+	<h5 class="text-center"><span class="label label-warning">Atención: No hay noticias para mostrar</span></h5>
+
+{% endif %}
+
+{% if noticias %}
+
+	<a href="/noticias/page/1"> << </a>
+
+	{% if noticias.has_previous %}
+		<a href="/noticias/page/{{noticias.previous_page_number}}">  Prev </a>
+	{% else %}
+		<a href="#"> Prev </a>
+	{% endif %}
+
+	{% if noticias.has_next %}
+		<a href="/noticias/page/{{noticias.next_page_number}}"> Next </a>
+	{% else %}
+		<a href="#"> Next </a>
+	{% endif %}
+
+		<a href="/noticias/page/{{noticias.paginator.num_pages}}"> >> </a>
+
+	<h6> Page {{noticias.number}} of {{noticias.paginator.num_pages}} </h6>
+
+{% endif %}
+
+
+{% endblock %}

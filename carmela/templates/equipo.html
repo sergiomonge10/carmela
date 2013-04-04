@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %} Equipos {% endblock %}
+
+
+{% block content-center %} 
+
+{% if equipo %} 
+		<h2>Descripcion del equipo</h2>
+			<h4>Equipo: {{equipo.nombre}}</h4>
+			<h4>División: {{equipo.division}}</h4>
+			<img src="{{equipo.multimedia}}" width="200" align="right"/>
+			<h4>Historia: </h4><p>{{equipo.descripcion|safe}}</p>
+			
+		<br><br>
+			<a class="btn" href="/jugadoras/{{equipo.id}}">Explorar el plantel</a>
+
+{% endif %}
+
+{% endblock %}

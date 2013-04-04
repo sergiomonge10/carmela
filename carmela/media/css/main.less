@@ -1,0 +1,218 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+.squareGen(@bg: gray , @height: 4cm){
+	height: @height;
+	background-color: @bg;
+}
+
+.cursorHand(){
+	cursor: pointer;
+}
+
+.fonts(@color: gray, @size: 1em){
+	color: @color;
+	font-size: @size;
+	font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #151515;
+	/*background-color: #FFFFFF;*/
+}
+
+#upperSquare{
+	margin: 9% 0 0 0;
+	background-image: url("/media/images/cover.jpg");
+}
+
+#upperSquare2{
+	margin: 9% 0 0 0;
+	background-image: url("/media/images/cover2.jpg");
+}
+
+#upperSquare3{
+	margin: 9% 0 0 0;
+	background-image: url("/media/images/cover3.jpg");
+}
+
+#options{
+	margin: 0;
+	padding: 3% 0 0 0 ;
+	li{
+		height: 1.6cm;
+		margin: 7% 0 0 0;
+		list-style: none;
+		border-bottom: 1px solid #000;
+
+		img{
+			/*display: inline-block;*/
+			float: left;
+			margin: 0 0 0 9%;
+		}
+
+		a{
+			color: #666;
+			float: left;
+			font-size: 2em;
+			margin: 0 0 0 3%;
+			padding: 1% 0 0 0;
+			text-decoration: none;
+			/*display: inline-block;*/
+		}
+
+		a:hover{
+     		color: #f91ab2;
+     	}
+	}
+}
+
+
+#goals{
+	.cursorHand;
+	background-color: #e03047;
+
+	img{
+		margin: 17% 0 0 0;
+	}
+}
+
+#goals:hover{
+	background-color: #f91ab2;
+}
+
+#ref{
+	.cursorHand;
+	background-color: #92e14b;
+}
+
+#ref:hover{
+	background-color: #63f437;
+}
+
+#league{
+	.cursorHand;
+	background-color: #4bdce1;
+
+	h1{
+		text-align: center;
+		padding: 35% 0 0 0;
+	}
+}
+
+#league:hover{
+	background-color: #00e4ff;
+}
+
+
+#app{
+   margin: 5% 0 0 0;
+}
+
+#app_img{
+	width: 100%;
+}
+
+#coke{
+	/*padding: 8% 0 0 6%;*/
+	background-color: #cd2311;
+
+	img{
+		padding: 7% 0 0 20%;
+	}
+}
+
+#powerade{
+	/*padding: 8% 0 0 6%;*/
+	background-color: #3397d3;
+
+	img{
+		padding: 0 0 0 18%;
+	}
+}
+
+#rep{
+	padding: 3% 0 0 5%;
+	background-color: white;
+}
+
+#info{
+	text-align: left;
+	padding: 9% 0 0 8%;
+}
+
+.contentWrapper{
+	width: 85%;
+	margin: 0 auto;
+}
+
+.header{
+	 width: 100%;
+     height: 2cm;
+     opacity: 0.7;
+     position: fixed;
+     background-color: black;
+
+     ul{
+     	margin: 0 0 0 33%;
+     	padding: 1% 0 0 0;
+
+     	li{
+     		margin: 1%;
+     		float: left;
+     		list-style: none;
+
+     		a{
+     			color: white;
+     			font-size: 1.5em;
+                text-decoration: none;  
+     		}
+
+     		a:hover{
+     			border-bottom: 4px solid #f91ab2;
+     		}
+     	}
+     }
+}
+
+.square{
+	width: 100%;
+	margin: 9% 0 0 0;
+   .squareGen(gray,9cm);
+    background-color: #333034;
+}
+
+.middleSquare{
+	 margin: 2% 0 0 0;
+	.squareGen(blue,18.75cm);
+	 background-color: #333034;
+}
+
+.bigSquare{
+	.squareGen(blue,15cm);
+}
+
+.sponsorSquare{
+	 margin: 4% 0 0 0;
+	.squareGen(blue,4cm);
+}
+
+.commonText{
+	.fonts(#FFF, 3em);
+}
+
+.middleText{
+	 font-weight: lighter;
+	.fonts(#FFF, 6em);
+}
+
+.bgText{
+	color: white;
+	opacity: 0.7;
+	font-size: 2em;
+	margin: 15% 69% 0 0;
+	background-color: #e03047;
+}
+

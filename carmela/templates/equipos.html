@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %} Equipos {% endblock %}
+
+{% block content-center %} 
+
+{% if equipos %} 
+	<h2>Equipos en la liga</h2>
+	<br/>
+
+	<div class="row-fluid">
+
+	{% for e in equipos %}
+
+		<div class="span2">
+		<p><a href="/equipo/{{e.id}}"><img src="{{e.multimedia}}" width="70" alt="{{e.nombre}}"/></a></p>
+		</div>
+	
+	{% endfor %}
+	</div>
+{% else %}
+
+	<h5 class="text-center"><span class="label label-warning">Atención: No hay equipos para mostrar</span></h5>
+
+{% endif %}
+
+{% endblock %}
