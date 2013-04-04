@@ -3,6 +3,7 @@ carmela
 
 carmela
 
+Entrega Martes.......
 
 Por hacer -->
 
@@ -13,3 +14,5 @@ Optimizacion en la interfaz
 Borrado logico
 Logo Uniffut
 Calendario y Tabla de posiciones
+Texto Corto para la noticia
+
