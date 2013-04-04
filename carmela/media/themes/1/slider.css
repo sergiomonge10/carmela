@@ -1,7 +1,7 @@
 ﻿#mcts1 
 {
     width:700px;
-    height:86px;
+    height:100px;
     margin: 0 auto;
     padding:36px 20px;
     border:1px solid #dedcb4;
@@ -29,7 +29,7 @@
 
 #mcts1 img 
 {
-    border:none;
+    border:black;
 }
 
 

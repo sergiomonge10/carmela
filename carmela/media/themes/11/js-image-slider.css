@@ -5,7 +5,7 @@
 #ribbon {width:111px;height:111px;position:absolute;top:-4px;left:-4px;background:url(ribbon.png) no-repeat;z-index:7;}
         
 #slider {
-    width:700px;height:500px;/* Make it the same size as your images */
+    width:500px;height:450px;/* Make it the same size as your images */
 	background:#fff url(loading.gif) no-repeat 50% 50%;
 	position:relative;
 	margin:0 auto;/*make the image slider center-aligned */
@@ -32,7 +32,7 @@
 /* Caption styles */
 div.mc-caption-bg, div.mc-caption-bg2 {
 	position:absolute;
-	width:10%;
+	width:50%;
 	height:auto;
 	padding:0;
 	left:0px; /*if the caption needs to be aligned from right, specify by right instead of left. i.e. right:20px;*/
@@ -47,8 +47,8 @@ div.mc-caption-bg {
 div.mc-caption {
 	font: bold 14px/20px Arial;
 	color:#EEE;
-	z-index:4;
-	padding:10px 0;/*Adding a padding-left or padding-right here will make the caption area wider than its background. Sometimes you may need to define its width again here to keep it the same width as its background area (div.mc-caption-bg).*/
+	z-index:9;
+	padding:10px 100;/*Adding a padding-left or padding-right here will make the caption area wider than its background. Sometimes you may need to define its width again here to keep it the same width as its background area (div.mc-caption-bg).*/
 	text-align:center;
 }
 div.mc-caption a {
@@ -61,10 +61,10 @@ div.mc-caption a:hover {
 
 /* ------ built-in navigation bullets wrapper ------*/
 div.navBulletsWrapper  {
-	top:550px; left:100px; /* Its position is relative to the #slider */
-	width:350px;
+	top:500px; left:10px; /* Its position is relative to the #slider */
+	width:100%;
 	background:none;
-	padding-left:20px;
+	padding-left:10px;
 	position:relative;
 	z-index:5;
 	cursor:pointer;

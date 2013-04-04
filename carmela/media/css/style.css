@@ -17,14 +17,15 @@ body{
 	background: linear-gradient(to bottom,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); */
 	
-	background: url(/media/images/estadio-nacional.jpg) no-repeat fixed center bottom;
+	background: url(/media/images/sele.jpg) no-repeat fixed center center;
+	background-size:100%;
 	/*background-repeat: no-repeat;*/
+	/*background: white;*/
 }
 
 
 header{
-	background: white;
-	height: auto;
+	
 }
 
 #principal-container{
@@ -36,6 +37,7 @@ header{
 	padding-top: 20px;
 	padding-bottom: 20px;
 	height: auto;
+	width: auto;
 	
 }
 
