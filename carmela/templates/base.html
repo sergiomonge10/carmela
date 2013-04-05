@@ -16,6 +16,11 @@
     <link href='/media/themes/1/slider.css' rel='stylesheet' type='text/css' >
     <script src='/media/themes/1/thumbnail-slider.js' type='text/javascript'></script>
 
+     <link href='/media/themes/11/js-image-slider.css' rel='stylesheet' type='text/css' >
+    <script src='/media/themes/11/js-image-slider.js' type='text/javascript'></script>
+
+    <link rel="stylesheet" href="{{ STATIC_URL }}django_tables2/themes/paleblue/css/screen.css" /
+
 
 </head>
 
@@ -60,14 +65,12 @@
                     <a href="#">Segunda Division</a>
                 </div>
             </li>
-            <li><a href="#">Tabla de Posiciones</a>
+            <li><a href="/tabla">Tabla de Posiciones</a>
                 <div>
                     <a href="#">Primera Division</a>
                     <a href="#">Segunda Division</a>
                 </div>  
-            </li>
-            <li><a href="#">Live your goals</a>
-            </li>
+
             <li><a href="/galeria/page/1">Galeria</a>
             </li>
             <li><a href="#">Nosotros</a>
@@ -101,17 +104,17 @@
         <div id="mcts1">
             {% if patrocinadores%}
                 {% for p in patrocinadores%}
-                    <img src="{{p.multimedia}}" style="width:200px; height:175px;" >
+                    <img src="{{p.multimedia}}" style="width:150px; height:100px;"  >
                 {% endfor %}>
             {% endif %}
-            <img src="/media/images/patrocinadores/cocacola.png" style="width:200px; height:125px;" >
-            <img src="/media/images/patrocinadores/powerade.jpg " style="width:200px; height:125px;" />
-            <img src="/media/images/patrocinadores/repretel.png" style="width:200px; height:125px;" />
-            <img src="/media/images/patrocinadores/thrifty.jpg" style="width:200px; height:125px;" />
-            <img src="/media/images/patrocinadores/cocacola.png" style="width:200px; height:125px;" >
-            <img src="/media/images/patrocinadores/powerade.jpg " style="width:200px; height:125px;" />
-            <img src="/media/images/patrocinadores/repretel.png" style="width:200px; height:125px;" />
-            <img src="/media/images/patrocinadores/thrifty.jpg" style="width:200px; height:125px;" />
+            <img src="/media/images/patrocinadores/cocacola.png" style="width:150px; height:100px;" >
+            <img src="/media/images/patrocinadores/powerade.jpg " style="width:150px; height:100px;"  />
+            <img src="/media/images/patrocinadores/repretel.png" style="width:150px; height:100px;"  />
+            <img src="/media/images/patrocinadores/thrifty.jpg" style="width:150px; height:100px;"  />
+            <img src="/media/images/patrocinadores/cocacola.png" style="width:150px; height:100px;"  >
+            <img src="/media/images/patrocinadores/powerade.jpg " style="width:150px; height:100px;"  />
+            <img src="/media/images/patrocinadores/repretel.png" style="width:150px; height:100px;"  />
+            <img src="/media/images/patrocinadores/thrifty.jpg" style="width:150px; height:100px;" />
         </div>
     </div>
 

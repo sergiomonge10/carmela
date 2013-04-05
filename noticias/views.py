@@ -8,7 +8,7 @@ from django.core.paginator import Paginator, EmptyPage, InvalidPage
 
 def noticias_view(request,page):
 	listnoticias = Noticia.objects.order_by('-fecha')
-	paginator = Paginator(listnoticias,5)
+	paginator = Paginator(listnoticias,3)
 	try:
 		page = int(page)
 	except:

@@ -18,7 +18,10 @@
 {% if noticias %} 
 		<h3>Noticias</h3>
 		{% for n in noticias %}
-			<h5>{{n.fecha}} - <a href="/noticia/{{n.id}}">{{n.titulo}} </a></h5>
+			<h5>{{n.fecha}} - {{n.titulo}} - {{n.texto|safe|truncatewords:"25"|linebreaks}}<a href="/noticia/{{n.id}}">.....ver mas</a></h5>
+
+			 <br>
+
 		{% endfor %}
 
 {% else %}

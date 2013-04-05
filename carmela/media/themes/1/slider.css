@@ -1,6 +1,6 @@
 ﻿#mcts1 
 {
-    width:700px;
+    width:110%;
     height:100px;
     margin: 0 auto;
     padding:36px 20px;
@@ -20,8 +20,8 @@
 #mcts1 div.item 
 {
     padding:2px;
-    margin-right:6px; /* this specifies the distance between each thumbnail */
-    background-color:White;
+    margin-right:20px; /* this specifies the distance between each thumbnail */
+    background-color:white;
     border:1px solid #ddd;
     text-align:center;
     position:relative;
@@ -77,7 +77,7 @@
     height: 80px;
     background:#444;
     text-align:center;
-    color:White;
+    color:white;
     font:normal 11px/14px Arial;
     white-space:normal;
 }
