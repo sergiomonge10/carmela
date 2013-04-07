@@ -17,8 +17,9 @@ class Pagina(models.Model):
 			return false
 		else:
 			self.estado = False
-			super(Pagina, self).delete()
+			self.save()
 			return true
+
 	
 class TablaPrimera(models.Model):
 	equipo = models.CharField(max_length=100)
@@ -30,6 +31,15 @@ class TablaPrimera(models.Model):
 
 	def __unicode__(self,):
 		return self.equipo
+
+	def delete(self):
+		if self.estado == False:
+			return false
+		else:
+			self.estado = False
+			self.save()
+			return true
+
 	
 class TablaSegunda(models.Model):
 	equipo = models.CharField(max_length=100)
@@ -40,4 +50,13 @@ class TablaSegunda(models.Model):
 	puntos = models.IntegerField()
 
 	def __unicode__(self,):
-		return self.equipo	
+		return self.equipo
+
+
+	def delete(self):
+		if self.estado == False:
+			return false
+		else:
+			self.estado = False
+			self.save()
+			return true

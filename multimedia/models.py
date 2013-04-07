@@ -15,7 +15,7 @@ class Patrocinador(models.Model):
 			return false
 		else:
 			self.estado = False
-			super(Patrocinador, self).delete()
+			self.save()
 			return true
 
 class CategoriaMultimedia(models.Model):
@@ -33,13 +33,11 @@ class CategoriaMultimedia(models.Model):
 			return false
 		else:
 			self.estado = True
-			super(Multimedia, self).delete()
+			self.save()
 			return true
 	
 
 class Multimedia(models.Model):
-
-		
         referencia = models.CharField(max_length=100)
         nombre = models.CharField(max_length=50)
         tipo = models.ForeignKey("TipoMultimedia")
@@ -49,13 +47,13 @@ class Multimedia(models.Model):
         def __unicode__(self):
                 return self.referencia
 
-		def delete(self):
-			if self.estado == False:
-				return false
-			else:
-				self.estado = True
-				super(Multimedia, self).delete()
-				return true
+	def delete(self):
+		if self.estado == False:
+			return false
+		else:
+			self.estado = True
+			self.save()
+			return true
 
 
 class TipoMultimedia(models.Model):
@@ -70,6 +68,6 @@ class TipoMultimedia(models.Model):
 			return false
 		else:
 			self.estado = False
-			super(TipoMultimedia, self).delete()
+			self.save()
 			return true
 

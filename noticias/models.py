@@ -21,5 +21,5 @@ class Noticia(models.Model):
                         return false
                 else: 
                         self.estado = False
-			super(Noticia, self).delete()
+			self.save()
                         return true

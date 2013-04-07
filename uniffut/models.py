@@ -20,8 +20,10 @@ class Bitacora(models.Model):
 			return false
 		else:
 			self.estado = False
-			super(Bitacora, self).delete()
+			self.save()
 			return true
+
+
 
 
 
@@ -39,7 +41,7 @@ class Division(models.Model):
 			return false
 		else:
 			self.estado = False
-			super(Division, self).delete()
+			self.save()
 			return true
 
 
@@ -57,7 +59,7 @@ class Torneo(models.Model):
 			return false
 		else:
 			self.estado = False
-			super(Torneo, self).delete()
+			self.save()
 			return true
 
 
@@ -77,7 +79,7 @@ class Equipo(models.Model):
 			return FALSE
 		else:
 			self.estado = False
-			super(Equipo, self).delete()
+			self.save()
 			return TRUE
 
 
@@ -104,5 +106,5 @@ class Jugador(models.Model):
 			return false
 		else:
 			self.estado = False
-			super(Jugador, self).delete()
+			self.save()
 			return true
