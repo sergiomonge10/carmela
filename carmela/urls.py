@@ -29,6 +29,3 @@ urlpatterns = patterns('',
     #(r'^photologue/', include('photologue.urls')),
 )
 
-urlpatterns += patterns('',
-    url(r'^admintools/', include('admin_tools.urls')),
-)
