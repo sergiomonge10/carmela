@@ -1,5 +1,7 @@
 # Django settings for carmela project.
 import os
+from django.utils.translation import ugettext_lazy as _
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -14,7 +16,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': 'carmela',                      # Or path to database file if using sqlite3.
         'USER': 'root',                      # Not used with sqlite3.
-        'PASSWORD': 'root',                  # Not used with sqlite3.
+        'PASSWORD': '280690',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
     }
@@ -132,8 +134,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_tables2',
-    # Uncomment the next line to enable the admin:
-    'django.contrib.admin',
+
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
     'multimedia',
@@ -141,7 +142,81 @@ INSTALLED_APPS = (
     'paginas',
     'uniffut',
     'tinymce',
+
+    'fluent_dashboard',
+    'admin_tools',
+    'admin_tools.theming',
+    'admin_tools.menu',
+    'admin_tools.dashboard',
+    'django.contrib.admin',
 )
+
+# Configuracion de DASHBOARD-FLUENT-ADMIN
+ADMIN_TOOLS_INDEX_DASHBOARD = 'fluent_dashboard.dashboard.FluentIndexDashboard'
+ADMIN_TOOLS_APP_INDEX_DASHBOARD = 'fluent_dashboard.dashboard.FluentAppIndexDashboard'
+ADMIN_TOOLS_MENU = 'fluent_dashboard.menu.FluentMenu'
+# ADMIN_MEDIA_PREFIX = '/static/admin/'
+
+FLUENT_DASHBOARD_DEFAULT_MODULE = 'admin_tools.dashboard.modules.AppList'
+FLUENT_DASHBOARD_ICON_THEME = 'oxygen'
+
+FLUENT_DASHBOARD_APP_ICONS = {
+    'multimedia/patrocinador': 'preferences-contact-list.png',
+    'multimedia/multimedia': 'view-media-visualization.png',
+    'paginas/pagina': 'folder-txt.png',
+    'paginas/tablaprimera': 'view-conversation-balloon.png',
+    'paginas/tablasegunda': 'folder.png',
+    'noticias/noticia': 'view-pim-news.png',
+    'multimedia/categoriamultimedia': 'view-choose.png',
+    'multimedia/tipomultimedia': 'view-multiple-objects.png',
+    'uniffut/bitacora': 'view-pim-tasks.png',
+    'uniffut/division': 'server-database.png',
+    'uniffut/equipo': 'view-calendar-list.png',
+    'uniffut/jugador': 'view-media-playlist.png',
+    'uniffut/torneo': 'view-calendar-journal.png',
+    'he_one/host': 'preferences-desktop-wallpaper.png',
+    'he_one/pcfile': 'folder-remote.png',
+    'he_one/log': 'utilities-system-monitor.png',
+    'he_one/namesystem': 'server-database.png',
+    'he_one/filepermission': 'kwalletmanager.png',
+    'he_one/userpermission': 'resource-group.png',
+}
+
+FLUENT_DASHBOARD_APP_GROUPS = (
+    ('Multimedia', {
+        'models': (
+            'multimedia.models.*',
+        ),
+    }),
+    ('Noticias', {
+        'models': (
+            'noticias.models.*',
+        ),
+    }),
+    ('Paginas', {
+        'models': (
+            'paginas.models.*',
+        ),
+    }),
+    ('Uniffut', {
+        'models': (
+            'uniffut.models.*',
+        ),
+    }),
+    ('Administration', {
+        'models': (
+            'django.contrib.auth.*',
+            'django.contrib.sites.*',
+            'registration.*',
+        ),
+    }),
+    ('Applications', {
+        'models': ('*',),
+        'module': 'AppList',
+        'collapsible': True,
+    }),
+)
+
 
 
 # Configuracion del TINYMCE
