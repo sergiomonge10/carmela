@@ -11,3 +11,4 @@ Cambiar los labels en el admin, por el espanglish
 Galeria de Fotografias y videos
 Calendario
 
+Ya falta menos :D
