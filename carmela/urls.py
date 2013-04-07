@@ -22,5 +22,9 @@ urlpatterns = patterns('',
 
     url(r'^tinymce/', include('tinymce.urls')),
 
+     url(r'^admintools/', include('admin_tools.urls')),
+
+      url(r'^admintools/', include('admin_tools.urls')),
+
     #(r'^photologue/', include('photologue.urls')),
 )

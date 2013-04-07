@@ -22,7 +22,7 @@ class Pagina(models.Model):
 
 	
 class TablaPrimera(models.Model):
-	equipo = models.CharField(max_length=100)
+	equipo = models.ForeignKey(Equipo)
 	juegos = models.IntegerField()
 	GolesFavor = models.IntegerField()
 	GolesContra = models.IntegerField()
@@ -42,7 +42,7 @@ class TablaPrimera(models.Model):
 
 	
 class TablaSegunda(models.Model):
-	equipo = models.CharField(max_length=100)
+	equipo = models.ForeignKey(Equipo)
 	juegos = models.IntegerField()
 	GolesFavor = models.IntegerField()
 	GolesContra = models.IntegerField()
