@@ -13,6 +13,7 @@ Galeria de Fotografias y videos
 Optimizacion en la interfaz
 Borrado logico
 Logo Uniffut
-Calendario y Tabla de posiciones
-Texto Corto para la noticia
+Calendario
+
+Mae ... ocupo que acomode ese logo de la Uniffut de una forma tuanis :)
 
