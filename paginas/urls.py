@@ -4,6 +4,8 @@ from django.conf.urls.defaults import patterns,url
 urlpatterns = patterns('paginas.views',
 
 
-	url(r'^tabla/$','tabla_view',name='view_tabla'),
+	url(r'^tablaprimera/$','tabla1_view',name='view_tabla1'),
+
+	url(r'^tablasegunda/$','tabla2_view',name='view_tabla2'),
 
 	)

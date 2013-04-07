@@ -20,14 +20,24 @@ class Pagina(models.Model):
 			super(Pagina, self).delete()
 			return true
 	
-class Tabla(models.Model):
+class TablaPrimera(models.Model):
 	equipo = models.CharField(max_length=100)
 	juegos = models.IntegerField()
-	golesCasa = models.IntegerField()
-	golesVisita = models.IntegerField()
-	golDiferencia = models.IntegerField()
+	GolesFavor = models.IntegerField()
+	GolesContra = models.IntegerField()
+	GolDiferencia = models.IntegerField()
 	puntos = models.IntegerField()
 
 	def __unicode__(self,):
 		return self.equipo
-		
+	
+class TablaSegunda(models.Model):
+	equipo = models.CharField(max_length=100)
+	juegos = models.IntegerField()
+	GolesFavor = models.IntegerField()
+	GolesContra = models.IntegerField()
+	GolDiferencia = models.IntegerField()
+	puntos = models.IntegerField()
+
+	def __unicode__(self,):
+		return self.equipo	
