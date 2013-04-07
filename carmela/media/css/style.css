@@ -59,9 +59,11 @@ header{
 	margin-top: 13%;
 }
 
-#logo {
-
+#logo .over
+{
+    background: white;
 }
+
 
 
 
