@@ -77,7 +77,6 @@ class Equipo(models.Model):
 			return TRUE
 
 
-
 class Jugador(models.Model):
 	nid = models.CharField(max_length=50)
 	nombre = models.CharField(max_length=50)
