@@ -23,10 +23,6 @@ class Bitacora(models.Model):
 			self.save()
 			return true
 
-
-
-
-
 class Division(models.Model):
 	nombre = models.CharField(max_length=50)
 	torneo = models.ForeignKey("Torneo")
@@ -44,7 +40,6 @@ class Division(models.Model):
 			self.save()
 			return true
 
-
 class Torneo(models.Model):
 	nombre = models.CharField(max_length=50)
 	fecha_inicio = models.DateField()
@@ -61,7 +56,6 @@ class Torneo(models.Model):
 			self.estado = False
 			self.save()
 			return true
-
 
 
 class Equipo(models.Model):
