@@ -8,4 +8,6 @@ urlpatterns = patterns('paginas.views',
 
 	url(r'^tablasegunda/$','tabla2_view',name='view_tabla2'),
 
+	url(r'^calendario/$','partidos_view',name='view_partidos'),
+
 	)

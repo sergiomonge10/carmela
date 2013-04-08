@@ -60,3 +60,19 @@ class TablaSegunda(models.Model):
 			self.estado = False
 			self.save()
 			return true
+
+
+class Partido(models.Model):
+	equipoLocal = models.ForeignKey(Equipo,related_name='equipoLocal')
+	equipoVisita = models.ForeignKey(Equipo,related_name='equipoVisita')
+	fecha = models.DateTimeField()
+	lugar = models.CharField(max_length=100)
+	estadio = models.CharField(max_length=100)
+	jornada = models.IntegerField()
+
+	def __unicode__(self,):
+		return self.lugar
+
+
+	
+		
