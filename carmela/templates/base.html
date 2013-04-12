@@ -1,5 +1,4 @@
 <!DOCTYPE HTML>
-{% autoescape on %}
 <html lang="en">
 
 <head>	
@@ -21,6 +20,7 @@
 
 	<link rel="stylesheet" href="{{ STATIC_URL }}django_tables2/themes/paleblue/css/screen.css" />
 	<link href='/media/css/style.css' rel='stylesheet' type='text/css'>
+
 </head>
 
 <body style="padding:15px 20px;">
@@ -82,7 +82,8 @@
      <div id="principal-container" class="container-fluid">
         <div id="principal-row" class="row-fluid">
         <div class="span2">
-
+            {% block side-izquierda %}
+            {% endblock %}
         </div>
         <div class="span7">
             {% block content-center%}
@@ -105,17 +106,17 @@
         <div id="mcts1">
             {% if patrocinadores%}
                 {% for p in patrocinadores%}
-                    <img src="{{p.multimedia}}" style="width:150px; height:100px;"  >
+                    <img src="{{p.multimedia}}" style="width:130px; height:80px;"  />
                 {% endfor %}>
             {% endif %}
-            <img src="/media/images/patrocinadores/cocacola.png" style="width:150px; height:100px;" >
-            <img src="/media/images/patrocinadores/powerade.jpg " style="width:150px; height:100px;"  />
-            <img src="/media/images/patrocinadores/repretel.png" style="width:150px; height:100px;"  />
-            <img src="/media/images/patrocinadores/thrifty.jpg" style="width:150px; height:100px;"  />
-            <img src="/media/images/patrocinadores/cocacola.png" style="width:150px; height:100px;"  >
-            <img src="/media/images/patrocinadores/powerade.jpg " style="width:150px; height:100px;"  />
-            <img src="/media/images/patrocinadores/repretel.png" style="width:150px; height:100px;"  />
-            <img src="/media/images/patrocinadores/thrifty.jpg" style="width:150px; height:100px;" />
+            <img src="/media/images/patrocinadores/cocacola.png" style="width:130px; height:80px;" >
+            <img src="/media/images/patrocinadores/powerade.jpg " style="width:130px; height:80px;"  />
+            <img src="/media/images/patrocinadores/repretel.png" style="width:130px; height:80px;"  />
+            <img src="/media/images/patrocinadores/thrifty.jpg" style="width:130px; height:80px;"  />
+            <img src="/media/images/patrocinadores/cocacola.png" style="width:130px; height:80px;"  >
+            <img src="/media/images/patrocinadores/powerade.jpg " style="width:130px; height:80px;"  />
+            <img src="/media/images/patrocinadores/repretel.png" style="width:130px; height:80px;"  />
+            <img src="/media/images/patrocinadores/thrifty.jpg" style="width:130px; height:80px;" />
         </div>
     </div>
 
@@ -135,5 +136,4 @@
 
 
 </body>
-{% endautoescape  %}
 </html>

@@ -23,3 +23,8 @@ def noticia_view(request,id_noticia):
 	noticia = Noticia.objects.get(id=id_noticia)
 	ctx = {'noticia':noticia}	
 	return render_to_response('noticia.html',ctx,context_instance=RequestContext(request))
+
+def ultimasNoticias_view(request):
+	noticias = Noticia.objects.order_by('-fecha')[:5]
+	ctx = {'noticias':noticias}
+	return render_to_response('index.html',ctx,context_instance=RequestContext(request))
