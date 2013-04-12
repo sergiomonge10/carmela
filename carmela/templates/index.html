@@ -1,6 +1,12 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 {% block title %} Uniffut {% endblock %}
 
+
+{% block side-izquierda %}
+	{% for e in noticias %}
+		<p>{{e.titulo}}</p>
+	{% endfor %}
+{% endblock %}
 
 {% block content-center %} 
 
@@ -8,5 +14,6 @@
   <h2>Bienvenidos al sitio oficial de la Federación Costarricense de Futbol Femenino. 
   <small>La mas completa informacion a tu alcance.</small></h2>
 </div>
+
 
 {% endblock %}

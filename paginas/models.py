@@ -70,8 +70,8 @@ class Partido(models.Model):
 	estadio = models.CharField(max_length=100)
 	jornada = models.IntegerField()
 
-	def __unicode__(self,):
-		return self.lugar
+	def __unicode__(self):
+		return u'%s -- %s' % (self.equipoLocal, self.equipoVisita)
 
 
 	
