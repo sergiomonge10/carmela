@@ -1,16 +1,6 @@
 {% extends 'base.html' %}
-{% block title %} Equipos {% endblock %}
+{% block title %} Noticias {% endblock %}
 
-
-{% block navbar %}
-
-	<li><a href="{% url view_index %}">Inicio</a></li>
-	<li><a href="{% url view_equipos %}">Equipos</a></li>
-	<li><a href="#">Live your Goals</a></li>
-	<li class="active"><a href="{% url view_noticias%}">Noticias</a></li>
-	<li><a href="#">Acerca</a></li>
-	<li><a href="#">Contacto</a></li>
-{% endblock %}
 
 
 {% block content-center %} 
@@ -18,6 +8,7 @@
 {% if noticias %} 
 		<h3>Noticias</h3>
 		{% for n in noticias %}
+			<a href="/noticia/{{n.id}}"><img src="{{n.multimedia}}" ></a>
 			<h5>{{n.fecha}} - {{n.titulo}} - {{n.texto|safe|truncatewords:"25"|linebreaks}}<a href="/noticia/{{n.id}}">.....ver mas</a></h5>
 
 			 <br>
