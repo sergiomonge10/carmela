@@ -23,7 +23,4 @@ def galeria_view(request,id_categoria):
 	ctx = {'imagenes':imagenes}
 	return render_to_response('imagenes.html',ctx,context_instance=RequestContext(request))
 
-def patrocinadores_view(request):
-	patrocinadores = Patrocinador.objects.filter()
-	ctx = {'patrocinadores':patrocinadores}
-	return render_to_response('base.html',ctx,context_instance=RequestContext(request))
+

@@ -8,7 +8,6 @@ urlpatterns = patterns('noticias.views',
 
 	url(r'^noticia/(?P<id_noticia>.*)/$','noticia_view',name='view_noticia'),
 
-	url(r'^ultimas/$','ultimasNoticias_view',name='view_ultimas'),
 
 	#url(r'^jugadoras/(?P<id_equipo>.*)/$','jugadoras_view',name='view_jugadoras'),
 
