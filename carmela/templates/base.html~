@@ -89,7 +89,7 @@
 	    <strong>Últimas noticias</strong>
 	     {% if ultimas_noticias %}
 		{% for n in ultimas_noticias %}
-			<p><a href="/noticia/{{n.id}}">{{n.titulo}}</a></p>
+			<a href="/noticia/{{n.id}}">{{n.titulo}}</a>
 		{% endfor %}
 	     {% endif %}
 
