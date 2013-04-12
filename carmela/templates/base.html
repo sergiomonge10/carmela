@@ -35,36 +35,24 @@
                 <div>
                     <div class="column">
                         <b>Primera Division</b>
-                        <a href="#">Arenal-Coronado</a>
-                        <a href="#">Moravia</a>
-                        <a href="#">C.C.D.R Flores</a>
-                        <a href="#">Saprissa</a>
-                        <a href="#">Asturias PTS</a>
-                        <a href="#">UCEM-Alajuela</a>
-                        <a href="#">Dimas Escazu</a>
-                        <a href="#">Liberia</a>
-                        <a href="#">Municipal Carrillo</a>
-                        <a href="#">Cartago</a>
+                        {%if listaequiposprimera %}
+                            {%for n in listaequiposprimera %}
+                                <a href="/equipo/{{n.id}}">{{n.nombre}}</a>
+                            {%endfor%}
+                        {%endif%}
                     </div>
                     <div class="column">
                         <b>Segunda Division</b>
-                        <a href="#">Barra Parismina</a>
-                        <a href="#">Buceteras FC</a>
-                        <a href="#">Campo 2</a>
-                        <a href="#">Bosque de Guacimo FC</a>
-                        <a href="#">Molino</a>
-                        <a href="#">Cariari</a>
-                        <a href="#">Deportivo Florida</a>
-                        <a href="#">Ticaban</a>
+                        {%if listaequipossegunda %}
+                            {%for n in listaequipossegunda %}
+                                <a href="/equipo/{{n.id}}">{{n.nombre}}</a>
+                            {%endfor%}
+                        {%endif%}
                     </div>
                 </div>
             </li>
             <li><a href="/noticias/page/1">Noticias</a></li>
             <li><a href="/calendario">Calendario</a>
-                <div>
-                    <a href="#">Primera Division</a>
-                    <a href="#">Segunda Division</a>
-                </div>
             </li>
             <li>Tabla de Posiciones
                 <div>
@@ -114,19 +102,11 @@
 
      <div class="div2">
         <div id="mcts1">
-            {% if patrocinadores%}
+            {% if patrocinadores %}
                 {% for p in patrocinadores%}
                     <img src="{{p.multimedia}}" style="width:130px; height:80px;"  />
                 {% endfor %}>
             {% endif %}
-            <img src="/media/images/patrocinadores/cocacola.png" style="width:130px; height:80px;" >
-            <img src="/media/images/patrocinadores/powerade.jpg " style="width:130px; height:80px;"  />
-            <img src="/media/images/patrocinadores/repretel.png" style="width:130px; height:80px;"  />
-            <img src="/media/images/patrocinadores/thrifty.jpg" style="width:130px; height:80px;"  />
-            <img src="/media/images/patrocinadores/cocacola.png" style="width:130px; height:80px;"  >
-            <img src="/media/images/patrocinadores/powerade.jpg " style="width:130px; height:80px;"  />
-            <img src="/media/images/patrocinadores/repretel.png" style="width:130px; height:80px;"  />
-            <img src="/media/images/patrocinadores/thrifty.jpg" style="width:130px; height:80px;" />
         </div>
     </div>
 
