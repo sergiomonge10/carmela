@@ -27,4 +27,4 @@ def noticia_view(request,id_noticia):
 def ultimasNoticias_view(request):
 	noticias = Noticia.objects.order_by('-fecha')[:5]
 	ctx = {'noticias':noticias}
-	return render_to_response('equipos.html',ctx,context_instance=RequestContext(request))
+	return render_to_response('index.html',ctx,context_instance=RequestContext(request))
