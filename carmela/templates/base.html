@@ -77,7 +77,8 @@
         <div id="sidebar-izquierda">
             <!-- {% block side-izquierda %}
             {% endblock %} -->
-        <h4>Últimas noticias</h4>
+  
+      <h4>Últimas noticias</h4>
          {% if ultimas_noticias %}
         {% for n in ultimas_noticias %}
             <a href="/noticia/{{n.id}}">{{n.titulo}}</a><br>
@@ -85,7 +86,7 @@
         {% endfor %}
          {% endif %}
         </div>
-         <a  href="/calendario"><img id="proximos-encuentros" src="/media/images/proximos-encuentros.png" /></a>
+         <a  href="/calendario"><img id="proximos-encuentros" src="/media/images/proximos-encuentros.png" width=300/></a>
         </div>
         <div class="span6">
             {% block content-center%}
