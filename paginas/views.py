@@ -30,8 +30,8 @@ def contacto_view(request):
 		if formulario.is_valid():
 			info_send = True
 			email = formulario.cleaned_data['Email']
-			title = formulario.cleaned_data['Title']
-			text = formulario.cleaned_data['Text']
+			title = formulario.cleaned_data['Titulo']
+			text = formulario.cleaned_data['Texto']
 
 			#Configuracion enviando mensaje via GMAIL
 
