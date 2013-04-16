@@ -29,8 +29,8 @@ class TablaPrimera(models.Model):
 	GolDiferencia = models.IntegerField()
 	puntos = models.IntegerField()
 
-	def __unicode__(self,):
-		return self.equipo
+	def __unicode__(self):
+                return self.equipo.nombre
 
 	def delete(self):
 		if self.estado == False:

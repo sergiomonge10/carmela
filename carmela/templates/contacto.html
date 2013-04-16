@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %} Contacto {% endblock %}
+
+
+{% block content-center %} 
+
+{% if info_send %}
+
+	Te contactaremos en las proximas horas.
+
+	<br>
+	La informacion recibida fue la siguiente: <br>
+	<p>Email: {{email}} </p>
+	<p>Titulo: {{title}}</p>
+	<p>Cuerpo:</p><h3>{{text}}<h3>
+
+{% else %}
+
+	<form action="." method="POST">
+		{% csrf_token %}
+		<center>{{form.as_p}}</center>
+	<center><input type="submit" value="Enviar"/></center>
+	</form>
+
+{% endif %}
+
+{% endblock %}

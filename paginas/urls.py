@@ -10,4 +10,8 @@ urlpatterns = patterns('paginas.views',
 
 	url(r'^calendario/$','partidos_view',name='view_partidos'),
 
+	url(r'^contacto/$','contacto_view',name='view_contacto'),
+
+	url(r'^nosotros/$','nosotros_view',name='view_nosotros'),
+
 	)
