@@ -40,10 +40,11 @@ header{
 	background: white;
 	padding-top: 20px;
 	padding-bottom: 20px;
-	padding-right:60px;
-	padding-left:60px;
+	padding-right:30px;
+	padding-left:30px;
 	height: auto;
-	width: 100%;
+	width: 1070px;
+	margin-left: -5px;
 	border:3px solid #336699;
 	
 }
@@ -64,9 +65,23 @@ header{
     background: white;
 }
 
+#sidebar-izquierda{
+-webkit-border-radius: 20px;
+-moz-border-radius: 20px;
+border-radius: 20px;
+border-style: solid;
+border-width: 1px;
+border-color: #E0E0E0;
+padding-top:5px;
+padding-left: 10px;
+padding-right: 10px;
+padding-bottom: 10px;
+/*font-size: 11px;
+line-height: 1px;*/
+}
 
-#equipos{
 
-
+#proximos-encuentros{
+	padding-top: 20px;
 
 }

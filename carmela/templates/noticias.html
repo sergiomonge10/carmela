@@ -8,13 +8,13 @@
 {% if noticias %} 
 		<h3>Noticias</h3>
 		{% for n in noticias %}
-			<a href="/noticia/{{n.id}}"><img src="{{n.multimedia}}" width="300" height="300" align="center" ></a>
-			<h5>{{n.fecha}} - {{n.titulo}} - {{n.texto|safe|truncatewords:"25"|linebreaks}}<a href="/noticia/{{n.id}}">.....ver mas</a></h5>
-
-			 <br>
+			<a href="/noticia/{{n.id}}"><img src="{{n.multimedia}}" width="200" /></a>
+			<h4><a href="/noticia/{{n.id}}">{{n.titulo}}</a></h4>
+			<p>{{n.texto|safe|truncatewords:"25"|linebreaks}}</p>
+			<!-- <a href="/noticia/{{n.id}}" class="btn btn-small pull-right">Ver más</a> -->
+			<hr width=95% align="center">
 
 		{% endfor %}
-
 {% else %}
 
 	<h5 class="text-center"><span class="label label-warning">Atención: No hay noticias para mostrar</span></h5>
@@ -23,6 +23,7 @@
 
 {% if noticias %}
 
+	<br/><br/>
 	<a href="/noticias/page/1"> << </a>
 
 	{% if noticias.has_previous %}
