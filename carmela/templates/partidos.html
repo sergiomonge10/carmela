@@ -4,6 +4,8 @@
 
 {% block content-center %} 
 
+<h1>Proximos Encuentros</h1>
+<hr width=95% align="center">
 
 {% if partidos %} 
 
@@ -12,7 +14,8 @@
 					<h4> {{p.equipoLocal}} - {{p.equipoVisita}} </h4> 
 					<h6>{{p.fecha}}</h6>
 					<h6>Estadio {{p.estadio}}, {{p.lugar}}</h6>
-					<br>
+					<p>Jornada: {{p.jornada}}</p>
+					<hr width=95% align="center">
 
 		{% endfor %}
 

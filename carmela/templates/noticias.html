@@ -1,19 +1,18 @@
 {% extends 'base.html' %}
 {% block title %} Noticias {% endblock %}
 
-
-
 {% block content-center %} 
 
+<h2>Últimas Noticias</h2>
+<hr width=95% align="center">
+
 {% if noticias %} 
-		<h3>Noticias</h3>
 		{% for n in noticias %}
 			<a href="/noticia/{{n.id}}"><img src="{{n.multimedia}}" width="200" /></a>
 			<h4><a href="/noticia/{{n.id}}">{{n.titulo}}</a></h4>
 			<p>{{n.texto|safe|truncatewords:"25"|linebreaks}}</p>
 			<!-- <a href="/noticia/{{n.id}}" class="btn btn-small pull-right">Ver más</a> -->
 			<hr width=95% align="center">
-
 		{% endfor %}
 {% else %}
 

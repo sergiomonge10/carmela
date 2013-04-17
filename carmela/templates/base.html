@@ -75,23 +75,22 @@
         <div id="principal-row" class="row-fluid">
         <div class="span3">
         <div id="sidebar-izquierda">
-            <!-- {% block side-izquierda %}
-            {% endblock %} -->
-  
-      <h4>Últimas noticias</h4>
-         {% if ultimas_noticias %}
-        {% for n in ultimas_noticias %}
-            <a href="/noticia/{{n.id}}">{{n.titulo}}</a><br>
-            <hr width=95% align="center">
-        {% endfor %}
-         {% endif %}
+
+            <h4>Últimas noticias</h4>
+             {% if ultimas_noticias %}
+                {% for n in ultimas_noticias %}
+                    <a href="/noticia/{{n.id}}">{{n.titulo}}</a><br>
+                    <hr width=95% align="center">
+                {% endfor %}
+             {% endif %}
+
         </div>
-         <a  href="/calendario"><img id="proximos-encuentros" src="/media/images/proximos-encuentros.png" width=300/></a>
+             <a  href="/calendario"><img id="proximos-encuentros" src="/media/images/proximos-encuentros.png" width=300/></a>
         </div>
-        <div class="span6">
-            {% block content-center%}
-            {% endblock %}
-        </div>
+            <div class="span6">
+                {% block content-center%}
+                {% endblock %}
+            </div>
         <div class="span3">
 
     <a class="twitter-timeline"  href="https://twitter.com/4Geeks_"  data-widget-id="255190734334992384">Tweets by @4Geeks_</a>

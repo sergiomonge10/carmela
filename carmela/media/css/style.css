@@ -66,6 +66,7 @@ header{
 }
 
 #sidebar-izquierda{
+position:fixed no-repeat center center;
 -webkit-border-radius: 20px;
 -moz-border-radius: 20px;
 border-radius: 20px;
@@ -76,12 +77,11 @@ padding-top:5px;
 padding-left: 10px;
 padding-right: 10px;
 padding-bottom: 10px;
-/*font-size: 11px;
-line-height: 1px;*/
+/*font-size: 11px;*/
+
 }
 
 
 #proximos-encuentros{
 	padding-top: 20px;
-
 }

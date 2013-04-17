@@ -24,9 +24,9 @@ class Pagina(models.Model):
 class TablaPrimera(models.Model):
 	equipo = models.ForeignKey(Equipo)
 	juegos = models.IntegerField()
-	GolesFavor = models.IntegerField()
-	GolesContra = models.IntegerField()
-	GolDiferencia = models.IntegerField()
+	GolesFavor = models.IntegerField(verbose_name="GF")
+	GolesContra = models.IntegerField(verbose_name="GC")
+	GolDiferencia = models.IntegerField(verbose_name="GD")
 	puntos = models.IntegerField()
 
 	def __unicode__(self):
@@ -44,9 +44,9 @@ class TablaPrimera(models.Model):
 class TablaSegunda(models.Model):
 	equipo = models.ForeignKey(Equipo)
 	juegos = models.IntegerField()
-	GolesFavor = models.IntegerField()
-	GolesContra = models.IntegerField()
-	GolDiferencia = models.IntegerField()
+	GolesFavor = models.IntegerField(verbose_name="GF")
+	GolesContra = models.IntegerField(verbose_name="GC")
+	GolDiferencia = models.IntegerField(verbose_name="GD")
 	puntos = models.IntegerField()
 
 	def __unicode__(self,):
