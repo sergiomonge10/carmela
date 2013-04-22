@@ -5,16 +5,7 @@ from multimedia.models import CategoriaMultimedia,Multimedia,Patrocinador
 from django.core.paginator import Paginator, EmptyPage, InvalidPage
 
 def galerias_view (request,page):
-	listgalerias = CategoriaMultimedia.objects.filter()
-	paginator = Paginator(listgalerias,5)
-	try:
-		page = int(page)
-	except:
-		page = 1
-	try:
-		galerias = paginator.page(page)
-	except (EmptyPage,InvalidPage):
-		gelerias = paginator.page(paginator.num_pages)
+	galerias = CategoriaMultimedia.objects.filter(estado=True)
 	ctx = {'galerias':galerias}
 	return render_to_response('galerias.html',ctx,context_instance=RequestContext(request))
 
